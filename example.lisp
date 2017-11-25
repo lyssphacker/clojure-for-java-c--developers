@@ -1,3 +1,5 @@
+;; Rainer Joswig's solution copied from http://bit.ly/2A6yiM2
+
 (defmacro defmapping (name mapping &body fields)
   `(progn
      (defclass ,name ()
