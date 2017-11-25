@@ -4,4 +4,4 @@ There is a Common Lisp implementation done by Rainer Joswig, who described it [h
 
 This very simple example can be used to illustrate to Java or C# programmers, used to class-based OOP style of (mostly) imperative programming, why they might sometimes, when complications in their implementation far exceedes the complexity of the problem, consider using a language with syntactic abstractions, like Common Lisp or Clojure.
 
-There is more general point which this example illustrates, on a very basic, but also very vivid level, the one which [SICP](https://mitpress.mit.edu/sicp/) highlights as one of the main approaches at handling complexity - metalingustic abstraction or building languages.
+There is more general point which this example illustrates, on a very basic, but also very vivid level, the one which [SICP](https://mitpress.mit.edu/sicp/) (there are some related quotes [here](https://github.com/lyssphacker/quotes/blob/master/creating-languages.md)) highlights as one of the main approaches at handling complexity - metalingustic abstraction or building languages.
