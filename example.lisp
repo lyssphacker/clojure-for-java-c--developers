@@ -17,7 +17,7 @@
   (04 18 customer-name)
   (19 23 customer-id)
   (24 27 call-type-code)
-  (28 35 date-of-call-string)))
+  (28 35 date-of-call-string))
 
 (defmapping usage "USGE"
   (04 08 customer-id)
@@ -30,3 +30,11 @@
 SVCLHOHPE          10201DX0320050315........................
 SVCLTWO           x10301MRP220050329..............................
 USGE10301TWO          x50214..7050329...............................")
+
+;; expression to parse *test-lines*
+(map nil 'describe
+     (with-input-from-string (stream *test-lines*)
+       (loop for line = (read-line stream nil nil)
+             while line
+             collect (parse-line-for-class line (find-mapping-class-name
+                                                 (intern (subseq line 0 4)))))))
