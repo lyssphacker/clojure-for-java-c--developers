@@ -2,7 +2,7 @@ This little example should demostrate what is Clojure and generally all Lisp dia
 
 It also illustrates differences in an approach one might have trying to implement the solution in C# or Java (Fowler's article contains [solution](https://github.com/lyssphacker/what-lisp-is-good-for-example/blob/master/c-sharp-solution/Example.cs) in C#), and in a Lisp. Typically in C# one might have object-oriented approach of creating reusable classes (like ReaderStrategy and FieldExtractor) which are then instantiated for every different piece of input data. The other approach might take configuration out of C# and write it into an XML or configuration language with custom syntax.
 
-Common Lisp implementation is done by Rainer Joswig, who described it [here](https://vimeo.com/77280671). It will also contains Clojure implementation.
+Common Lisp implementation is done by Rainer Joswig, who described it [here](https://vimeo.com/77280671).
 
 This very simple example can be used to illustrate to Java or C# programmers, used to class-based OOP style of (mostly) imperative programming, why they might sometimes, when complications in their implementation far exceed the complexity of the problem, consider using a language with syntactic abstractions, like Common Lisp or Clojure.
 
