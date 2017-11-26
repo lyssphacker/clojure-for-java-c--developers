@@ -11,7 +11,7 @@ There is more general point which this example illustrates, on a very basic, but
 Crucial differences between Lisp and C# approach:
 1. In Lisp code is data so what in C# solution is written in configuration file, which is by itself not executable, can in Lisp be made to be executable via macros. "Putting parentheses around data" is approach taken in Joswig's solution. Whether configuration is done in XML or in some other data format, in C# solution there will a need for some library which will help with reading that data. Approach without configuration file is more straightforward but makes extending the implementation with more data tedious and too distanced from the problem domain, since everything has to be expressed in Java.
 2. There is no need to create special classes which will hold data for each mapping, like in C# implementation. *defclass* will be executed for the name of each mapping.
-3. All the work done by ReaderStrategy and FieldExtractor classes from C# implementation in Lisp implementation is done by parse-line-for-class method. It takes advantage of the fact that *fields* macro argument can be treated as list of lists and can be manipulated accordingly with destructuring, which makes this method very general.
+3. All the work done by ReaderStrategy and FieldExtractor classes from C# implementation, in Lisp implementation is done by parse-line-for-class method. It takes advantage of the fact that *fields* macro argument can be treated as list of lists and can be manipulated accordingly with destructuring, which makes this method very general.
 
 Generally, Lisp implementation is:
 1. More concise
