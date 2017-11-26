@@ -1,6 +1,6 @@
 This little example should demostrate what is Clojure and generally all Lisp dialects good for - building domain specific languages. It is motivated by now quite old but probably still relevant [article](https://martinfowler.com/articles/languageWorkbench.html) written by Martin Fowler.
 
-There is a Common Lisp implementation done by Rainer Joswig, who described it [here](https://vimeo.com/77280671). It will also contain Clojure implementation.
+There is a Common Lisp implementation done by Rainer Joswig, who described it [here](https://vimeo.com/77280671). It will also contains Clojure implementation.
 
 This very simple example can be used to illustrate to Java or C# programmers, used to class-based OOP style of (mostly) imperative programming, why they might sometimes, when complications in their implementation far exceed the complexity of the problem, consider using a language with syntactic abstractions, like Common Lisp or Clojure.
 
