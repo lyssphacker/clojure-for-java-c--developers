@@ -5,7 +5,7 @@ It also illustrates differences in an approach one might have trying to implemen
 Common Lisp implementation is done by Rainer Joswig, who described it [here](https://vimeo.com/77280671). It will also contains Clojure implementation.
 
 Crucial differences between Lisp and C# approach:
-1. In Lisp code is data
+1. In Lisp code is data so what in C# solution is written in configuration file which is by itself not executable can in Lisp be made to be executable via macros.
 
 This very simple example can be used to illustrate to Java or C# programmers, used to class-based OOP style of (mostly) imperative programming, why they might sometimes, when complications in their implementation far exceed the complexity of the problem, consider using a language with syntactic abstractions, like Common Lisp or Clojure.
 
