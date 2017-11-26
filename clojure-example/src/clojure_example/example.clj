@@ -1,7 +1,7 @@
 (ns clojure-example.example)
 
-(defmacro defmapping [name mapping & fields]
+(defmacro defmapping [name & fields]
   `(do
-     (println name)
-     (println ~mapping)
-     (println '~@fields)))
+     (defmulti parse-line (fn [x] x))
+     (defmethod parse-line name [x] name)))
+
