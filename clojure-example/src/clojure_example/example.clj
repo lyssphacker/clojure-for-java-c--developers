@@ -1,7 +1,8 @@
 (ns clojure-example.example)
 
 (defmacro defmapping [name & fields]
-  `(do
-     (defmulti parse-line (fn [x] x))
-     (defmethod parse-line name [x] name)))
+  (let [x-sym (gensym "x")]
+    `(do
+       (defmulti parse-line (fn [~x-sym] ~x-sym))
+       (defmethod parse-line ~name [~x-sym] (name ~name)))))
 
