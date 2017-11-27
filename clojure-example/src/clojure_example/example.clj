@@ -1,9 +1,9 @@
 (ns clojure-example.example)
 
-(defmulti parse-line (fn [x class] x))
+(defmulti parse-line (fn [x y] x))
 
 (defmacro defmapping [name & fields]
-  `(defmethod parse-line [~name String] [x# line#]
+  `(defmethod parse-line ~name [x# line#]
      (for [el# '~fields]
        (let [[start# end# property#]
              el#]
