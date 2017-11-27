@@ -13,7 +13,7 @@ Crucial differences between Lisp and C# approach:
 2. There is no need to create special classes which will hold data for each mapping, like in C# implementation. *defclass* will be executed for the name of each mapping.
 3. All the work done by ReaderStrategy and FieldExtractor classes from C# implementation, in Lisp implementation is done by parse-line-for-class method. It takes advantage of the fact that *fields* macro argument can be treated as list of lists and can be manipulated accordingly with destructuring, which makes this method very general.
 
-Clojure additionally makes implementation more concise because it does not require definition of class specifically for each mapping. Clojure's explicit aim is to avoid boilerplate code intrinsic to many OOP languages which required creation of specific classes for each piece of data, which are very often just maps (key-value pairs of slots and their values).
+Clojure additionally makes implementation more concise because it does not require definition of classes specifically for each mapping. Clojure's explicit aim is to avoid boilerplate code intrinsic to many OOP languages which require creation of specific classes for each piece of data, which are very often just maps (key-value pairs of slots and their values).
 
 
 Generally, Lisp implementation is:
