@@ -5,7 +5,7 @@
 (defmulti parse-line (fn [x y] x))
 
 (defmacro defmapping [name & fields]
-  `(defmethod parse-line ~name [x# line#]
+  `(defmethod parse-line ~name [name# line#]
      (apply
        merge
        (map
