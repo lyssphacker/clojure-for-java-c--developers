@@ -1,5 +1,7 @@
 (ns clojure-example.example)
 
+(import '(java.io BufferedReader StringReader))
+
 (defmulti parse-line (fn [x y] x))
 
 (defmacro defmapping [name & fields]
@@ -22,4 +24,18 @@
             (9 22 customer-name)
             (30 30 cycle)
             (31 36 read-date))
+
+(def test-lines
+  "SVCLFOWLER         10101MS0120050313.........................
+SVCLHOHPE          10201DX0320050315........................
+SVCLTWO           x10301MRP220050329..............................
+USGE10301TWO          x50214..7050329...............................")
+
+(defn process-lines
+  [lines]
+  (map
+    #(parse-line (subs % 0 4) %)
+    (line-seq
+      (BufferedReader.
+        (StringReader. lines)))))
 
