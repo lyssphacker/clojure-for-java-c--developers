@@ -6,12 +6,13 @@
 
 (defmacro defmapping [name & fields]
   `(defmethod parse-line ~name [x# line#]
-     (let [m# {}]
-       (for [el# '~fields]
-         (let [[start# end# property#] el#]
-           (assoc m#
-             property#
-             (subs line# start# (+ end# 1))))))))
+     (apply
+       merge
+       (map
+         (fn [el#]
+           (let [[start# end# property#] el#]
+             {property# (subs line# start# (+ end# 1))}))
+         '~fields))))
 
 (defmapping ::SVCL
             (4 18 customer-name)
@@ -34,7 +35,11 @@ USGE10301TWO          x50214..7050329...............................")
 (defn process-lines
   [lines]
   (map
-    #(parse-line (subs % 0 4) %)
+    #(parse-line
+       (keyword
+         (str *ns*)
+         (subs % 0 4))
+       %)
     (line-seq
       (BufferedReader.
         (StringReader. lines)))))
