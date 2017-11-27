@@ -4,12 +4,10 @@
 
 (defmacro defmapping [name & fields]
   `(defmethod parse-line ~name [x# line#]
-     (for [el# '~fields]
-       (let [[start# end# property#]
-             el#]
-         (println start#)
-         (println end#)
-         (println property#)
-         ))
-     line#))
+     (let [m# {}]
+       (for [el# '~fields]
+         (let [[start# end# property#] el#]
+           (assoc m#
+             property#
+             (subs line# start# (+ 1 end#))))))))
 
