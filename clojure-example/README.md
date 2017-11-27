@@ -1,14 +1,1 @@
-# clojure-example
-
-A Clojure library designed to ... well, that part is up to you.
-
-## Usage
-
-FIXME
-
-## License
-
-Copyright © 2017 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Implementation of [this](https://martinfowler.com/articles/languageWorkbench.html) problem in Clojure inspired by Rainer Joswig's Common Lisp [implementation](https://vimeo.com/77280671).
