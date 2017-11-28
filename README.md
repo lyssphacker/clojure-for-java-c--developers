@@ -20,3 +20,5 @@ Generally, Lisp implementation is:
 1. More concise
 2. Easier to extend
 3. More general
+
+So, in conclusion, it can be said that [macros are a major win](https://github.com/lyssphacker/quotes/blob/master/macros-are-a-win.md).
